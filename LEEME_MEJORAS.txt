@@ -1,0 +1,27 @@
+BELMONTE - MEJORAS SOBRE EL PROYECTO BASE
+
+Se mantuvieron las versiones y configuraciones existentes del proyecto: Gradle Wrapper, Android Gradle Plugin, Kotlin, KSP, SDK y dependencias.
+
+Mejoras aplicadas:
+- La pantalla Conductor permite escribir el nombre del conductor asignado (por ejemplo, Dennis). Esto resuelve el caso en que se entra al área Conductor desde el menú usando la sesión admin y antes la pantalla buscaba solicitudes asignadas literalmente a "admin".
+- Las tarjetas de conductor muestran datos de forma compacta y ofrecen accesos a Google Maps para consultar el origen, el destino y navegar hacia el origen.
+- No se agregó una API key ni nuevas dependencias de mapas; los enlaces abren Google Maps o el navegador del teléfono.
+- Se conservó la estructura y el estilo Kotlin/Compose sencillo del proyecto original.
+
+Para abrir:
+1. Descomprime el ZIP.
+2. Abre la carpeta mejora en Android Studio.
+3. Acepta la ruta local del Android SDK si Android Studio la solicita; local.properties se omite porque contiene una ruta específica del computador donde se creó el ZIP.
+4. Sincroniza Gradle y ejecuta en el teléfono.
+
+Prueba sugerida:
+1. Inicia sesión con admin / 123.
+2. Crea una solicitud como pasajero.
+3. En Administrador, asigna el viaje al nombre Dennis.
+4. En el menú entra a Conductor, escribe Dennis y consulta los viajes.
+5. Prueba los botones de Google Maps y los estados Iniciar traslado / Finalizar traslado.
+
+Limitaciones conocidas:
+- La app sigue usando Room/local; no incluye backend Spring Boot.
+- No se añadió autocompletado real de direcciones ni lectura automática de GPS del dispositivo, ya que requieren integración adicional y permisos/configuración. Se conservaron las dependencias originales.
+- No fue posible compilar este ZIP en el entorno de preparación porque no pudo resolver services.gradle.org (UnknownHostException). Las versiones no se cambiaron; por favor sincroniza/compila en el mismo Android Studio donde el proyecto base ya funcionaba.
