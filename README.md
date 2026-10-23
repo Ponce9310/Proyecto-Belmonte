@@ -83,9 +83,6 @@ El proyecto se administra mediante Git y está alojado en GitHub. El historial i
 
 Este proyecto permite aplicar conocimientos de desarrollo Android con Kotlin, persistencia de datos, arquitectura de software, navegación entre pantallas, pruebas y control de versiones.
 
-## 👨‍💻 Autor
-
-**Dennis Ponce**
 
 ---
 
